@@ -30,8 +30,8 @@ class AuthController {
             const token = await createAccesToken({ id: userALter.id });
             res.cookie('token', token, {
                 httpOnly: true,
-                secure: process.env.NODE_ENV === 'production',
-                sameSite: 'Strict'
+                secure: true,
+                sameSite: 'None'
             });
             
             response(res, 200, { 
