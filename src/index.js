@@ -255,7 +255,7 @@ app.use((req, res, next) => {
 });
 app.use(errorHandler);
 
-const PORT = 8083;
+const PORT = process.env.PORT||8083;
 server.listen(PORT, () => {
     console.log(`🚀 Servidor Express + Socket.IO corriendo en puerto ${PORT}`);
     console.log(`🔄 Sistema de colaboración en tiempo real activado`);
