@@ -3,7 +3,7 @@ import pkg from 'pg';
 const { Pool } = pkg;
 
 // Use DATABASE_URL when provided (Neon), otherwise fall back to individual DB_* vars
-const connectionString = process.env.DATABASE_URL || `postgresql://${process.env.DB_USER || 'postgres'}:${process.env.DB_PASSWORD || ''}@${process.env.DB_HOST || 'localhost'}:${process.env.DB_PORT || 5432}/${process.env.DB_DATABASE || 'pizarra'}`;
+const connectionString = process.env.DATABASE_URL ;
 
 const pool = new Pool({
   connectionString,
